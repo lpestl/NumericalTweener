@@ -14,6 +14,7 @@ class NUMERICALTWEENER_API UTransitions : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 
+public:
 	UFUNCTION(BlueprintCallable, meta = (DisplayName = "Linear", Keywords = "Tweener Ease linear"), Category = "Numerical Tweener")
 	static float linear(float t, float b, float c, float d);
 

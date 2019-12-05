@@ -69,6 +69,7 @@ private:
 private:
 	TArray<Tween>	Tweens;
 	float			Scale;
-	bool			bOverride = true;
-	TMap<float*, FTweenCompletedCallback> callbacks;
+	// TODO: Set mode
+	bool			bOverride;
+	TMap<float*, FTweenCompletedCallback> Callbacks;
 };
