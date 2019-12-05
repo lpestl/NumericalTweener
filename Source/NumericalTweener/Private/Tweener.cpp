@@ -25,19 +25,42 @@ void ATweener::Tick(float DeltaTime)
 
 }
 
-void ATweener::AddTween(float& var, float to, float time)
+void ATweener::AddTween(
+	float& var, 
+	float to, 
+	float time, 
+	FTweenCompletedCallback callback)
 {
-	// TODO:
 }
 
-void ATweener::AddTweenWithEase(float& var, float to, float time, ETransitionsEnum transition)
+void ATweener::AddEaseTween(
+	float& var, 
+	float to, 
+	float time, 
+	ETransitionsEnum transition,
+	FTweenCompletedCallback callback)
 {
-	// TODO:
 }
 
-void ATweener::AddTweenWithDelay(float& var, float to, float time, ETransitionsEnum transition, float delay)
+void ATweener::AddDelayTween(
+	float& var, 
+	float to, 
+	float time, 
+	ETransitionsEnum transition, 
+	float delay,
+	FTweenCompletedCallback callback)
 {
-	// TODO:
+}
+
+void ATweener::AddBezierTween(
+	float& var, 
+	float to, 
+	float time, 
+	ETransitionsEnum transition, 
+	float delay,
+	float bezierPoint, 
+	FTweenCompletedCallback callback)
+{
 }
 
 
@@ -62,12 +85,17 @@ int32 ATweener::GetTweenCount()
 	return 0;
 }
 
-void ATweener::AddTweenFull(float& var, float to, float time, ETransitionsEnum transition, float delay,
-	float bezierPoint, bool useBezier)
+void ATweener::AddTweenFull(
+	float& var, 
+	float to, 
+	float time, 
+	ETransitionsEnum transition, 
+	float delay,
+	float bezierPoint, 
+	bool useBezier, 
+	FTweenCompletedCallback callback)
 {
-	// TODO:
 }
-
 
 float ATweener::Bezier(float b, float e, float t, float p)
 {

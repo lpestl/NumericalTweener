@@ -16,14 +16,13 @@ public:
 	FDateTime timestamp;
 };
 
+DECLARE_DYNAMIC_DELEGATE(FTweenCompletedCallback);
 
 UCLASS()
 class NUMERICALTWEENER_API ATweener : public AActor
 {
 	GENERATED_BODY()
 
-	//TODO: Throw it to map and call callbacks
-	//DECLARE_DYNAMIC_DELEGATE_OneParam(FTweenComplete, float*, SourceValuePtr)
 public:	
 	// Sets default values for this actor's properties
 	ATweener();
@@ -37,16 +36,16 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener")
-	void AddTween(float& var, float to, float time /*need callback*/);
+	void AddTween(float& var, float to, float time, FTweenCompletedCallback callback);
 
 	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener")
-	void AddTweenWithEase(float& var, float to, float time, ETransitionsEnum transition /*need callback*/);
+	void AddEaseTween(float& var, float to, float time, ETransitionsEnum transition, FTweenCompletedCallback callback);
 
 	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener")
-	void AddTweenWithDelay(float& var, float to, float time, ETransitionsEnum transition, float delay /*need callback*/);
+	void AddDelayTween(float& var, float to, float time, ETransitionsEnum transition, float delay, FTweenCompletedCallback callback);
 
-	//UFUNCTION(BlueprintCallable, Category = "Numerical Tweener")
-	//void AddTween(float& var, float to, float time, ETransitionsEnum transition, float delay, float bezierPoint /*need callback*/);
+	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener")
+	void AddBezierTween(float& var, float to, float time, ETransitionsEnum transition, float delay, float bezierPoint, FTweenCompletedCallback callback);
 
 	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener")
 	void RemoveTween(float& var);
@@ -62,7 +61,7 @@ public:
 
 private:
 	UFUNCTION()
-	void AddTweenFull(float& var, float to, float time, ETransitionsEnum transition, float delay, float bezierPoint, bool useBezier /*, FTweenComplete OnTweenComplete*/);
+	void AddTweenFull(float& var, float to, float time, ETransitionsEnum transition, float delay, float bezierPoint, bool useBezier, FTweenCompletedCallback callback);
 
 	UFUNCTION()
 	float Bezier(float b, float e, float t, float p);
@@ -71,5 +70,5 @@ private:
 	TArray<Tween>	Tweens;
 	float			Scale;
 	bool			bOverride = true;
-	//TMap<float*, FTweenComplete> callbacks;
+	TMap<float*, FTweenCompletedCallback> callbacks;
 };
