@@ -7,6 +7,8 @@
 #include "TransitionsEnum.h"
 #include "Tweener.generated.h"
 
+DECLARE_LOG_CATEGORY_EXTERN(LogTweener, Log, All);
+
 class Tween
 {
 public:
@@ -61,7 +63,7 @@ public:
 
 private:
 	UFUNCTION()
-	void AddTweenFull(float& var, float to, float time, ETransitionsEnum transition, float delay, float bezierPoint, bool useBezier, FTweenCompletedCallback callback);
+	void AddTweenFull(UPARAM(ref)float& var, float to, float time, ETransitionsEnum transition, float delay, float bezierPoint, bool useBezier, FTweenCompletedCallback callback);
 
 	UFUNCTION()
 	float Bezier(float b, float e, float t, float p);
