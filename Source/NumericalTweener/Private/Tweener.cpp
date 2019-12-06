@@ -30,9 +30,13 @@ void ATweener::Tick(float DeltaTime)
 
 	for (int i = Tweens.Num() - 1; i >= 0; --i) 
 	{
-		UE_LOG(LogTweener, Log, TEXT("Tick"));
-		
-		if (float(Tweens[i].timestamp.GetMillisecond()) >= float(Tweens[i].duration)) 
+		UE_LOG(LogTweener, Log, TEXT("Tick "));
+
+		float elapsed = float(Tweens[i].timestamp.GetMillisecond());
+
+		UE_LOG(LogTweener, Log, TEXT("Tick %f"), elapsed);
+
+		if (elapsed >= float(Tweens[i].duration)) 
 		{
 			//tween is done
 			bool found = false;
@@ -397,7 +401,7 @@ void ATweener::Tick(float DeltaTime)
 		}
 
 		// TODO: Need change timstamp
-		//Tweens[i].timestamp += FTimespan()
+		Tweens[i].timestamp += FTimespan::FromSeconds(DeltaTime);
 	}
 }
 
