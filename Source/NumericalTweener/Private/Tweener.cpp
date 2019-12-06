@@ -396,7 +396,7 @@ void ATweener::Tick(float DeltaTime)
 }
 
 void ATweener::AddTween(
-	float& var, 
+	UPARAM(ref)float& var,
 	float to, 
 	float time, 
 	FTweenCompletedCallback callback)

@@ -36,7 +36,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener")
-	void AddTween(float& var, float to, float time, FTweenCompletedCallback callback);
+	void AddTween(UPARAM(ref)float& var, float to, float time, FTweenCompletedCallback callback);
 
 	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener")
 	void AddEaseTween(float& var, float to, float time, ETransitionsEnum transition, FTweenCompletedCallback callback);
