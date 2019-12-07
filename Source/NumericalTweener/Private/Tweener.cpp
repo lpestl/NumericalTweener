@@ -72,228 +72,228 @@ void ATweener::Tick(float DeltaTime)
 			{
 				switch (Tweens[i].easeFunction)
 				{
-					case ETransitionsEnum::TE_Linear:
+					case ETransitionsEnum::Linear:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::linear(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::Linear(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseInSine:
+					case ETransitionsEnum::EaseInSine:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeInSine(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseInSine(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseOutSine: 
+					case ETransitionsEnum::EaseOutSine: 
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeOutSine(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseOutSine(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseInOutSine:
+					case ETransitionsEnum::EaseInOutSine:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeInOutSine(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseInOutSine(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseInCubic:
+					case ETransitionsEnum::EaseInCubic:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeInCubic(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseInCubic(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseOutCubic:
+					case ETransitionsEnum::EaseOutCubic:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeOutCubic(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseOutCubic(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseInOutCubic:
+					case ETransitionsEnum::EaseInOutCubic:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeInOutCubic(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseInOutCubic(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseInQuint:
+					case ETransitionsEnum::EaseInQuint:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeInQuint(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseInQuint(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseOutQuint:
+					case ETransitionsEnum::EaseOutQuint:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeOutQuint(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseOutQuint(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseInOutQuint:
+					case ETransitionsEnum::EaseInOutQuint:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeInOutQuint(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseInOutQuint(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseInCirc:
+					case ETransitionsEnum::EaseInCirc:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeInCirc(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseInCirc(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseOutCirc:
+					case ETransitionsEnum::EaseOutCirc:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeOutCirc(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseOutCirc(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseInOutCirc:
+					case ETransitionsEnum::EaseInOutCirc:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeInOutCirc(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseInOutCirc(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseInBack:
+					case ETransitionsEnum::EaseInBack:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeInBack(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseInBack(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseOutBack:
+					case ETransitionsEnum::EaseOutBack:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeOutBack(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseOutBack(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseInOutBack:
+					case ETransitionsEnum::EaseInOutBack:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeInOutBack(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseInOutBack(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseInQuad:
+					case ETransitionsEnum::EaseInQuad:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeInQuad(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseInQuad(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseOutQuad:
+					case ETransitionsEnum::EaseOutQuad:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeOutQuad(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseOutQuad(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseInOutQuad:
+					case ETransitionsEnum::EaseInOutQuad:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeInOutQuad(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseInOutQuad(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseInQuart:
+					case ETransitionsEnum::EaseInQuart:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeInQuart(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseInQuart(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseOutQuart:
+					case ETransitionsEnum::EaseOutQuart:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeOutQuart(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseOutQuart(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseInOutQuart: 
+					case ETransitionsEnum::EaseInOutQuart: 
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeInOutQuart(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseInOutQuart(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseInExpo:
+					case ETransitionsEnum::EaseInExpo:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeInExpo(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseInExpo(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseOutExpo:
+					case ETransitionsEnum::EaseOutExpo:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeOutExpo(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseOutExpo(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseInOutExpo:
+					case ETransitionsEnum::EaseInOutExpo:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeInOutExpo(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseInOutExpo(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseInElastic:
+					case ETransitionsEnum::EaseInElastic:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeInElastic(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseInElastic(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseOutElastic:
+					case ETransitionsEnum::EaseOutElastic:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeOutElastic(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseOutElastic(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseInOutElastic:
+					case ETransitionsEnum::EaseInOutElastic:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeInOutElastic(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseInOutElastic(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseInBounce:
+					case ETransitionsEnum::EaseInBounce:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeInBounce(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseInBounce(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseOutBounce:
+					case ETransitionsEnum::EaseOutBounce:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeOutBounce(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseOutBounce(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
-					case ETransitionsEnum::TE_EaseInOutBounce:
+					case ETransitionsEnum::EaseInOutBounce:
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeInOutBounce(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseInOutBounce(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 						break;
 					default: 
 						Tweens[i].var[0] = Bezier(
 							Tweens[i].from,
 							Tweens[i].to,
-							UTransitions::easeOutExpo(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
+							UTransitions::EaseOutExpo(float(Tweens[i].timestamp.GetTicks()), 0.f, 1.f, float(Tweens[i].duration)),
 							Tweens[i].by);
 				}
 			}
@@ -302,101 +302,101 @@ void ATweener::Tick(float DeltaTime)
 				//Tweens[i].var[0] = (a.*tweens[i]._easeFunction)(float(tweens[i]._timestamp.elapsed()), tweens[i]._from, tweens[i]._to - tweens[i]._from, float(tweens[i]._duration));
 				switch (Tweens[i].easeFunction)
 				{
-					case ETransitionsEnum::TE_Linear:
-						Tweens[i].var[0] = UTransitions::linear(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::Linear:
+						Tweens[i].var[0] = UTransitions::Linear(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseInSine:
-						Tweens[i].var[0] = UTransitions::easeInSine(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseInSine:
+						Tweens[i].var[0] = UTransitions::EaseInSine(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseOutSine: 
-						Tweens[i].var[0] = UTransitions::easeOutSine(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration)); 
+					case ETransitionsEnum::EaseOutSine: 
+						Tweens[i].var[0] = UTransitions::EaseOutSine(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration)); 
 						break;
-					case ETransitionsEnum::TE_EaseInOutSine:
-						Tweens[i].var[0] = UTransitions::easeInOutSine(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseInOutSine:
+						Tweens[i].var[0] = UTransitions::EaseInOutSine(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseInCubic:
-						Tweens[i].var[0] = UTransitions::easeInCubic(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseInCubic:
+						Tweens[i].var[0] = UTransitions::EaseInCubic(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseOutCubic:
-						Tweens[i].var[0] = UTransitions::easeOutCubic(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseOutCubic:
+						Tweens[i].var[0] = UTransitions::EaseOutCubic(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseInOutCubic:
-						Tweens[i].var[0] = UTransitions::easeInOutCubic(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseInOutCubic:
+						Tweens[i].var[0] = UTransitions::EaseInOutCubic(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseInQuint:
-						Tweens[i].var[0] = UTransitions::easeInQuint(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseInQuint:
+						Tweens[i].var[0] = UTransitions::EaseInQuint(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseOutQuint:
-						Tweens[i].var[0] = UTransitions::easeOutQuint(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseOutQuint:
+						Tweens[i].var[0] = UTransitions::EaseOutQuint(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseInOutQuint:
-						Tweens[i].var[0] = UTransitions::easeInOutQuint(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseInOutQuint:
+						Tweens[i].var[0] = UTransitions::EaseInOutQuint(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseInCirc:
-						Tweens[i].var[0] = UTransitions::easeInCirc(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseInCirc:
+						Tweens[i].var[0] = UTransitions::EaseInCirc(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseOutCirc:
-						Tweens[i].var[0] = UTransitions::easeOutCirc(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseOutCirc:
+						Tweens[i].var[0] = UTransitions::EaseOutCirc(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseInOutCirc:
-						Tweens[i].var[0] = UTransitions::easeInOutCirc(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseInOutCirc:
+						Tweens[i].var[0] = UTransitions::EaseInOutCirc(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseInBack:
-						Tweens[i].var[0] = UTransitions::easeInBack(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseInBack:
+						Tweens[i].var[0] = UTransitions::EaseInBack(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseOutBack:
-						Tweens[i].var[0] = UTransitions::easeOutBack(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseOutBack:
+						Tweens[i].var[0] = UTransitions::EaseOutBack(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseInOutBack:
-						Tweens[i].var[0] = UTransitions::easeInOutBack(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseInOutBack:
+						Tweens[i].var[0] = UTransitions::EaseInOutBack(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseInQuad:
-						Tweens[i].var[0] = UTransitions::easeInQuad(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseInQuad:
+						Tweens[i].var[0] = UTransitions::EaseInQuad(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseOutQuad:
-						Tweens[i].var[0] = UTransitions::easeOutQuad(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseOutQuad:
+						Tweens[i].var[0] = UTransitions::EaseOutQuad(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseInOutQuad:
-						Tweens[i].var[0] = UTransitions::easeInOutQuad(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseInOutQuad:
+						Tweens[i].var[0] = UTransitions::EaseInOutQuad(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseInQuart:
-						Tweens[i].var[0] = UTransitions::easeInQuart(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseInQuart:
+						Tweens[i].var[0] = UTransitions::EaseInQuart(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseOutQuart:
-						Tweens[i].var[0] = UTransitions::easeOutQuart(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseOutQuart:
+						Tweens[i].var[0] = UTransitions::EaseOutQuart(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseInOutQuart:
-						Tweens[i].var[0] = UTransitions::easeInOutQuart(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseInOutQuart:
+						Tweens[i].var[0] = UTransitions::EaseInOutQuart(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseInExpo:
-						Tweens[i].var[0] = UTransitions::easeInExpo(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseInExpo:
+						Tweens[i].var[0] = UTransitions::EaseInExpo(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseOutExpo:
-						Tweens[i].var[0] = UTransitions::easeOutExpo(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseOutExpo:
+						Tweens[i].var[0] = UTransitions::EaseOutExpo(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseInOutExpo:
-						Tweens[i].var[0] = UTransitions::easeInOutExpo(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseInOutExpo:
+						Tweens[i].var[0] = UTransitions::EaseInOutExpo(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseInElastic:
-						Tweens[i].var[0] = UTransitions::easeInElastic(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseInElastic:
+						Tweens[i].var[0] = UTransitions::EaseInElastic(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseOutElastic: 
-						Tweens[i].var[0] = UTransitions::easeOutElastic(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration)); 
+					case ETransitionsEnum::EaseOutElastic: 
+						Tweens[i].var[0] = UTransitions::EaseOutElastic(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration)); 
 						break;
-					case ETransitionsEnum::TE_EaseInOutElastic:
-						Tweens[i].var[0] = UTransitions::easeInOutElastic(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseInOutElastic:
+						Tweens[i].var[0] = UTransitions::EaseInOutElastic(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseInBounce:
-						Tweens[i].var[0] = UTransitions::easeInBounce(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseInBounce:
+						Tweens[i].var[0] = UTransitions::EaseInBounce(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseOutBounce:
-						Tweens[i].var[0] = UTransitions::easeOutBounce(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseOutBounce:
+						Tweens[i].var[0] = UTransitions::EaseOutBounce(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
-					case ETransitionsEnum::TE_EaseInOutBounce:
-						Tweens[i].var[0] = UTransitions::easeInOutBounce(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+					case ETransitionsEnum::EaseInOutBounce:
+						Tweens[i].var[0] = UTransitions::EaseInOutBounce(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 						break;
 					default:
-						Tweens[i].var[0] = UTransitions::easeOutExpo(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
+						Tweens[i].var[0] = UTransitions::EaseOutExpo(float(Tweens[i].timestamp.GetTicks()), Tweens[i].from, Tweens[i].to - Tweens[i].from, float(Tweens[i].duration));
 				}
 			}			
 		}
@@ -409,7 +409,7 @@ void ATweener::AddTween(
 	float time, 
 	FTweenCompletedCallback callback)
 {
-	AddTweenFull(var, to, time, ETransitionsEnum::TE_EaseOutExpo, 0, 0, false, callback);
+	AddTweenFull(var, to, time, ETransitionsEnum::EaseOutExpo, 0, 0, false, callback);
 }
 
 void ATweener::AddEaseTween(
