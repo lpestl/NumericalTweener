@@ -12,10 +12,10 @@ DECLARE_LOG_CATEGORY_EXTERN(LogTweener, Log, All);
 class Tween
 {
 public:
-	float* var;
-	float from, to, duration, by, useBezier;
-	ETransitionsEnum easeFunction;
-	FDateTime timestamp;
+	float* Var;
+	float From, To, Duration, By, UseBezier;
+	ETransitionsEnum EaseFunction;
+	FDateTime Timestamp;
 };
 
 DECLARE_DYNAMIC_DELEGATE(FTweenCompletedCallback);
@@ -37,23 +37,23 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener")
-	void AddTween(UPARAM(ref)float& var, float to, float time, FTweenCompletedCallback callback);
+	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener", meta = (AutoCreateRefTerm = "callback"))
+	void AddTween(UPARAM(ref)float& Var, float To, float Time, const FTweenCompletedCallback& Callback);
+
+	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener", meta = (AutoCreateRefTerm = "callback"))
+	void AddEaseTween(UPARAM(ref)float& Var, float To, float Time, ETransitionsEnum Transition, const FTweenCompletedCallback& Callback);
+
+	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener", meta = (AutoCreateRefTerm = "callback"))
+	void AddDelayTween(UPARAM(ref)float& Var, float To, float Time, ETransitionsEnum Transition, float Delay, const FTweenCompletedCallback& Callback);
+
+	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener", meta = (AutoCreateRefTerm = "callback"))
+	void AddBezierTween(UPARAM(ref)float& Var, float To, float Time, ETransitionsEnum Transition, float Delay, float BezierPoint, const FTweenCompletedCallback& Callback);
 
 	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener")
-	void AddEaseTween(float& var, float to, float time, ETransitionsEnum transition, FTweenCompletedCallback callback);
+	void RemoveTween(UPARAM(ref)float& Var);
 
 	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener")
-	void AddDelayTween(float& var, float to, float time, ETransitionsEnum transition, float delay, FTweenCompletedCallback callback);
-
-	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener")
-	void AddBezierTween(float& var, float to, float time, ETransitionsEnum transition, float delay, float bezierPoint, FTweenCompletedCallback callback);
-
-	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener")
-	void RemoveTween(float& var);
-
-	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener")
-	void SetTimeScale(float scale);
+	void SetTimeScale(float Scale);
 
 	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener")
 	void RemoveAllTweens();
@@ -62,16 +62,15 @@ public:
 	int32 GetTweenCount();
 
 private:
-	UFUNCTION()
-	void AddTweenFull(UPARAM(ref)float& var, float to, float time, ETransitionsEnum transition, float delay, float bezierPoint, bool useBezier, FTweenCompletedCallback callback);
+	UFUNCTION(meta = (AutoCreateRefTerm = "callback"))
+	void AddTweenFull(UPARAM(ref)float& Var, float To, float Time, ETransitionsEnum Transition, float Delay, float BezierPoint, bool bUseBezier, const FTweenCompletedCallback& Callback);
 
-	UFUNCTION()
-	float Bezier(float b, float e, float t, float p);
+	static float Bezier(float b, float e, float t, float p);
 
 private:
-	TArray<Tween>	Tweens;
-	float			Scale;
-	// TODO: Set mode
-	bool			bOverride;
-	TMap<float*, FTweenCompletedCallback> Callbacks;
+	TArray<Tween>	Tweens_;
+	float			Scale_;
+	// TODO: Set mode by enum
+	bool			bOverride_;
+	TMap<float*, FTweenCompletedCallback> Callbacks_;
 };
