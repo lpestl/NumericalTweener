@@ -10,7 +10,7 @@
  * 
  */
 UCLASS()
-class NUMERICALTWEENER_API UTransitions : public UBlueprintFunctionLibrary
+class UTransitions : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 

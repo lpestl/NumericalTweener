@@ -21,7 +21,7 @@ public:
 DECLARE_DYNAMIC_DELEGATE(FTweenCompletedCallback);
 
 UCLASS()
-class NUMERICALTWEENER_API ATweener : public AActor
+class ATweener : public AActor
 {
 	GENERATED_BODY()
 
@@ -37,16 +37,16 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener", meta = (AutoCreateRefTerm = "callback"))
+	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener", meta = (AutoCreateRefTerm = "Callback"))
 	void AddTween(UPARAM(ref)float& Var, float To, float Time, const FTweenCompletedCallback& Callback);
 
-	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener", meta = (AutoCreateRefTerm = "callback"))
+	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener", meta = (AutoCreateRefTerm = "Callback"))
 	void AddEaseTween(UPARAM(ref)float& Var, float To, float Time, ETransitionsEnum Transition, const FTweenCompletedCallback& Callback);
 
-	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener", meta = (AutoCreateRefTerm = "callback"))
+	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener", meta = (AutoCreateRefTerm = "Callback"))
 	void AddDelayTween(UPARAM(ref)float& Var, float To, float Time, ETransitionsEnum Transition, float Delay, const FTweenCompletedCallback& Callback);
 
-	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener", meta = (AutoCreateRefTerm = "callback"))
+	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener", meta = (AutoCreateRefTerm = "Callback"))
 	void AddBezierTween(UPARAM(ref)float& Var, float To, float Time, ETransitionsEnum Transition, float Delay, float BezierPoint, const FTweenCompletedCallback& Callback);
 
 	UFUNCTION(BlueprintCallable, Category = "Numerical Tweener")
@@ -62,7 +62,7 @@ public:
 	int32 GetTweenCount();
 
 private:
-	UFUNCTION(meta = (AutoCreateRefTerm = "callback"))
+	UFUNCTION(meta = (AutoCreateRefTerm = "Callback"))
 	void AddTweenFull(UPARAM(ref)float& Var, float To, float Time, ETransitionsEnum Transition, float Delay, float BezierPoint, bool bUseBezier, const FTweenCompletedCallback& Callback);
 
 	static float Bezier(float b, float e, float t, float p);
