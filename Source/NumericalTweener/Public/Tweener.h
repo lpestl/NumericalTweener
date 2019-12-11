@@ -21,7 +21,7 @@ public:
 DECLARE_DYNAMIC_DELEGATE(FTweenCompletedCallback);
 
 UCLASS()
-class NUMERICALTWEENER_API ATweener : public AActor
+class ATweener : public AActor
 {
 	GENERATED_BODY()
 
