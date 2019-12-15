@@ -1,2 +1,3 @@
-# NumericalTweener
-Numerical Tweener - a small set of blueprint functions for smoothly animating (changing) numerical variables.
+# Numerical Tweener
+
+Numerical Tweener - набор из 31-го математического способа для плавного анимировния изменения численного значения. Набор позволяет упростить запуск анимации (tween) любого параметра, представленного в виде числа с плавающей точкой (float), с помощью двух нод: вызов менеджера анимации (Tweener) и запуск анимации (AddTween).
