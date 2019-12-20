@@ -92,5 +92,22 @@ TODO:
 
 ## Blueprints nodes
 
+* Transitions:
 
+![Transitions](media/TransitionCasses.png)
 
+* Get tweens manager:
+
+![Get Tweener](media/GetTweener.png)
+
+* Add tween:
+
+![AddTween](media/AvailableTweens.png)
+
+* Remove tweens:
+
+![Remove tweens](media/RemoveTweens.png)
+
+* Change Time scale for all added tweens:
+
+![Time Scale](media/TimeScale.png)
