@@ -12,6 +12,29 @@ https://youtu.be/Ndod2CiuWxU
 
 https://github.com/lpestl/NumericalTweenerDemo
 
+## Technical information
+
+### Features: 
+ * Blueprint callable TransitionsEnum;
+ * Blueprint callable Tweener (Tweens Manager);
+ * Tweener have time scale for all running tweens.
+
+### Code Modules: 
+ * Core;
+ * CoreUObject;
+ * Engine;
+ * Slate;
+ * SlateCore.
+
+
+Number of Blueprints: 0  
+Number of C++ Classes: 4  
+Network Replicated: No  
+Supported Development Platforms: "Win64", "Win32",  
+Supported Target Build Platforms: "Win64", "Win32",  
+Documentation: https://github.com/lpestl/NumericalTweenerDemo  
+Example Project: https://github.com/lpestl/NumericalTweenerDemo
+
 ## How To Use
 
 TODO:
