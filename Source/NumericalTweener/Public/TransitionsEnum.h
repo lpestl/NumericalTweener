@@ -1,11 +1,11 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// Copyright 2019 Mikhail S. Kataev. All Rights Reserved.
 
 #pragma once
 
 #include "CoreMinimal.h"
 
 /**
- * 
+ * Transitions Enum
  */
 UENUM(BlueprintType)
 enum class ETransitionsEnum : uint8

@@ -1,5 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
+// Copyright 2019 Mikhail S. Kataev. All Rights Reserved.
 
 #include "Transitions.h"
 
